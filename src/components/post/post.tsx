@@ -39,7 +39,7 @@ const Post: FC<TPost> = ({ title, desc, image, user, likes, ...props }) => {
         <div className="mx-4 bg-slate-100 min-h-[200px] rounded-xl p-4 flex justify-between font-sans">
             {image !== "" ? (
                 <img
-                    src={`http://localhost:3001${image}`}
+                    src={`https://social-back-vku9.vercel.app${image}`}
                     alt="Картинка"
                     className="w-2/5 h-[200px] object-cover rounded-xl"
                 />
@@ -69,7 +69,11 @@ const Post: FC<TPost> = ({ title, desc, image, user, likes, ...props }) => {
                 >
                     <img
                         className="mr-4 h-[40px] w-[40px] ml-auto object-cover rounded-full"
-                        src={user.avatarUrl !== "" ? `http://localhost:3001${user.avatarUrl}` : defaultImage}
+                        src={
+                            user.avatarUrl !== ""
+                                ? `https://social-back-vku9.vercel.app${user.avatarUrl}`
+                                : defaultImage
+                        }
                         alt="Аватар"
                     />
                     <p className="font-sans font-medium  text-slate-700">{`${user.name} ${user.secondName}`}</p>

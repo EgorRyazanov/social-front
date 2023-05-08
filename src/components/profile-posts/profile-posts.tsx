@@ -42,7 +42,7 @@ const ProfilePosts: FC<TPost> = ({ title, desc, image, user, likes, _id }) => {
         <div className="mx-4 bg-slate-100 min-h-[200px] cursor-pointer rounded-xl p-4 flex justify-between font-sans">
             {image !== "" ? (
                 <img
-                    src={`http://localhost:3001${image}`}
+                    src={`https://social-back-vku9.vercel.app${image}`}
                     alt="Картинка"
                     className="w-2/5 h-[200px] object-cover rounded-xl"
                 />

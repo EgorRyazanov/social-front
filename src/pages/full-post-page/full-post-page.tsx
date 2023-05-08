@@ -28,7 +28,7 @@ const FullPostPage: FC = () => {
             <div className="p-4">
                 {currentPost.imageUrl !== "" && (
                     <img
-                        src={`http://localhost:3001${currentPost.imageUrl}`}
+                        src={`https://social-back-vku9.vercel.app${currentPost.imageUrl}`}
                         className="max-h-[800px] max-w-[1200px] rounded-lg mb-4"
                         alt="Картинка"
                     />

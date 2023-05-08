@@ -79,7 +79,7 @@ const CreatePostPage: FC = () => {
         <div className="p-4">
             {values.imageUrl !== "" && (
                 <img
-                    src={`http://127.0.0.1:3001${values.imageUrl}`}
+                    src={`https://social-back-vku9.vercel.app${values.imageUrl}`}
                     className="mb-4 rounded-lg h-[400px]"
                     alt="загруженная картинка"
                 />

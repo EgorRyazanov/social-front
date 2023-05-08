@@ -49,7 +49,11 @@ const ProfilePage: FC = () => {
             <div>
                 <div className="flex p-4 border-b-2">
                     <img
-                        src={person?.avatarUrl !== "" ? `http://127.0.0.1:3001${person?.avatarUrl}` : defaultImage}
+                        src={
+                            person?.avatarUrl !== ""
+                                ? `https://social-back-vku9.vercel.app${person?.avatarUrl}`
+                                : defaultImage
+                        }
                         alt="Аватар"
                         className="w-2/5 h-[250px] object-cover rounded-xl"
                     />

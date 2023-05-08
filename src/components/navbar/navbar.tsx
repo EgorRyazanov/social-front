@@ -91,7 +91,7 @@ const Navbar: FC = () => {
                     className="mr-4 w-10 h-10 object-cover rounded-full"
                     src={
                         user?.avatarUrl !== "" || user?.avatarUrl
-                            ? `http://127.0.0.1:3001${user?.avatarUrl}`
+                            ? `https://social-back-vku9.vercel.app${user?.avatarUrl}`
                             : defaultAvatar
                     }
                     alt="Аватар"

@@ -82,7 +82,7 @@ const PeoplePage: FC = () => {
                                     <img
                                         src={
                                             element.avatarUrl !== ""
-                                                ? `http://127.0.0.1:3001${element.avatarUrl}`
+                                                ? `https://social-back-vku9.vercel.app${element.avatarUrl}`
                                                 : defaultImage
                                         }
                                         alt="Аватарка"
@@ -145,7 +145,7 @@ const PeoplePage: FC = () => {
                                     <img
                                         src={
                                             element.avatarUrl !== ""
-                                                ? `http://127.0.0.1:3001${element.avatarUrl}`
+                                                ? `https://social-back-vku9.vercel.app${element.avatarUrl}`
                                                 : defaultImage
                                         }
                                         alt="Аватарка"
@@ -182,7 +182,7 @@ const PeoplePage: FC = () => {
                                     <img
                                         src={
                                             element.avatarUrl !== ""
-                                                ? `http://127.0.0.1:3001${element.avatarUrl}`
+                                                ? `https://social-back-vku9.vercel.app${element.avatarUrl}`
                                                 : defaultImage
                                         }
                                         alt="Аватарка"
@@ -210,7 +210,7 @@ const PeoplePage: FC = () => {
                                     <img
                                         src={
                                             element.avatarUrl !== ""
-                                                ? `http://127.0.0.1:3001${element.avatarUrl}`
+                                                ? `https://social-back-vku9.vercel.app${element.avatarUrl}`
                                                 : defaultImage
                                         }
                                         alt="Аватарка"

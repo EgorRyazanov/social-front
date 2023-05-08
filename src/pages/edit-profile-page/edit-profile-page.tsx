@@ -47,7 +47,11 @@ const EditProfilePage: FC = () => {
             <div className="flex mb-4">
                 <div className="w-1/5">
                     <img
-                        src={values.avatarUrl !== "" ? `http://127.0.0.1:3001${values.avatarUrl}` : defaultImage}
+                        src={
+                            values.avatarUrl !== ""
+                                ? `https://social-back-vku9.vercel.app${values.avatarUrl}`
+                                : defaultImage
+                        }
                         className="mb-4 rounded-lg"
                         alt="загруженная картинка"
                     />
