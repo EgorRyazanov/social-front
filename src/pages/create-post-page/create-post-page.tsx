@@ -2,7 +2,7 @@ import React, { useRef, FC } from "react";
 import SimpleMDE from "react-simplemde-editor";
 import { Link, useParams } from "react-router-dom";
 import "easymde/dist/easymde.min.css";
-import $api from "../../services/axios";
+import $api, { API_URL } from "../../services/axios";
 import { useForm } from "../../hooks/useForm";
 import { useTypedDispatch } from "../../hooks/useTypedDispatch";
 import { TPost, create, updatePost } from "../../services/slices/posts";
@@ -79,7 +79,7 @@ const CreatePostPage: FC = () => {
         <div className="p-4">
             {values.imageUrl !== "" && (
                 <img
-                    src={`https://social-back-vku9.vercel.app${values.imageUrl}`}
+                    src={`${API_URL}${values.imageUrl}`}
                     className="mb-4 rounded-lg h-[400px]"
                     alt="загруженная картинка"
                 />

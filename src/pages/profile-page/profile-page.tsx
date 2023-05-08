@@ -4,7 +4,7 @@ import ProfilePosts from "../../components/profile-posts/profile-posts";
 import { useTypedSelector } from "../../hooks/useTypedSelector";
 import { TRootState } from "../../services/store";
 import { useParams } from "react-router-dom";
-import $api from "../../services/axios";
+import $api, { API_URL } from "../../services/axios";
 import { TUser, addFriend, deleteFriend } from "../../services/slices/user";
 import { Link } from "react-router-dom";
 import { useTypedDispatch } from "../../hooks/useTypedDispatch";
@@ -51,7 +51,7 @@ const ProfilePage: FC = () => {
                     <img
                         src={
                             person?.avatarUrl !== ""
-                                ? `https://social-back-vku9.vercel.app${person?.avatarUrl}`
+                                ? `${API_URL}${person?.avatarUrl}`
                                 : defaultImage
                         }
                         alt="Аватар"

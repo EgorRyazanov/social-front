@@ -5,6 +5,7 @@ import { TRootState } from "../../services/store";
 import { FC } from "react";
 import { useTypedDispatch } from "../../hooks/useTypedDispatch";
 import { clearUser } from "../../services/slices/user";
+import { API_URL } from "../../services/axios";
 
 const getUser = (state: TRootState) => state.userReducer.user;
 const Navbar: FC = () => {
@@ -91,7 +92,7 @@ const Navbar: FC = () => {
                     className="mr-4 w-10 h-10 object-cover rounded-full"
                     src={
                         user?.avatarUrl !== "" || user?.avatarUrl
-                            ? `https://social-back-vku9.vercel.app${user?.avatarUrl}`
+                            ? `${API_URL}${user?.avatarUrl}`
                             : defaultAvatar
                     }
                     alt="Аватар"

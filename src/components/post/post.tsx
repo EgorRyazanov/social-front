@@ -3,7 +3,7 @@ import defaultImage from "../../assets/default-avatar.jpg";
 import { useTypedDispatch } from "../../hooks/useTypedDispatch";
 import { useTypedSelector } from "../../hooks/useTypedSelector";
 import { likePost } from "../../services/slices/posts";
-import $api from "../../services/axios";
+import $api, { API_URL } from "../../services/axios";
 import { TRootState } from "../../services/store";
 import { Link } from "react-router-dom";
 import { TUser } from "../../services/slices/user";
@@ -39,7 +39,7 @@ const Post: FC<TPost> = ({ title, desc, image, user, likes, ...props }) => {
         <div className="mx-4 bg-slate-100 min-h-[200px] rounded-xl p-4 flex justify-between font-sans">
             {image !== "" ? (
                 <img
-                    src={`https://social-back-vku9.vercel.app${image}`}
+                    src={`${API_URL}${image}`}
                     alt="Картинка"
                     className="w-2/5 h-[200px] object-cover rounded-xl"
                 />
@@ -71,7 +71,7 @@ const Post: FC<TPost> = ({ title, desc, image, user, likes, ...props }) => {
                         className="mr-4 h-[40px] w-[40px] ml-auto object-cover rounded-full"
                         src={
                             user.avatarUrl !== ""
-                                ? `https://social-back-vku9.vercel.app${user.avatarUrl}`
+                                ? `${API_URL}${user.avatarUrl}`
                                 : defaultImage
                         }
                         alt="Аватар"

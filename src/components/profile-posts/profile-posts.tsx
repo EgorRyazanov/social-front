@@ -1,7 +1,7 @@
 import { FC } from "react";
 import { useTypedDispatch } from "../../hooks/useTypedDispatch";
 import { deletePost, likePost } from "../../services/slices/posts";
-import $api from "../../services/axios";
+import $api, { API_URL } from "../../services/axios";
 import { useTypedSelector } from "../../hooks/useTypedSelector";
 import { TRootState } from "../../services/store";
 import { Link } from "react-router-dom";
@@ -42,7 +42,7 @@ const ProfilePosts: FC<TPost> = ({ title, desc, image, user, likes, _id }) => {
         <div className="mx-4 bg-slate-100 min-h-[200px] cursor-pointer rounded-xl p-4 flex justify-between font-sans">
             {image !== "" ? (
                 <img
-                    src={`https://social-back-vku9.vercel.app${image}`}
+                    src={`${API_URL}${image}`}
                     alt="Картинка"
                     className="w-2/5 h-[200px] object-cover rounded-xl"
                 />

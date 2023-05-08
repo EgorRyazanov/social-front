@@ -1,7 +1,7 @@
 import { FC, useRef } from "react";
 import defaultImage from "../../assets/default-avatar.jpg";
 import { useForm } from "../../hooks/useForm";
-import $api from "../../services/axios";
+import $api, { API_URL } from "../../services/axios";
 import { useTypedDispatch } from "../../hooks/useTypedDispatch";
 import { useTypedSelector } from "../../hooks/useTypedSelector";
 import { TRootState } from "../../services/store";
@@ -49,7 +49,7 @@ const EditProfilePage: FC = () => {
                     <img
                         src={
                             values.avatarUrl !== ""
-                                ? `https://social-back-vku9.vercel.app${values.avatarUrl}`
+                                ? `${API_URL}${values.avatarUrl}`
                                 : defaultImage
                         }
                         className="mb-4 rounded-lg"

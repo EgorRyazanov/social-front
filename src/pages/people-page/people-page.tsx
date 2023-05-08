@@ -7,6 +7,7 @@ import { useTypedSelector } from "../../hooks/useTypedSelector";
 import { TRootState } from "../../services/store";
 import { Link } from "react-router-dom";
 import { deleteFriend, addFriend } from "../../services/slices/user";
+import { API_URL } from "../../services/axios";
 
 enum Status {
     Friends,
@@ -80,11 +81,7 @@ const PeoplePage: FC = () => {
                                     className="rounded-lg mr-10 bg-slate-100 min-h-[150px] w-3/5 mb-4 flex items-center p-4"
                                 >
                                     <img
-                                        src={
-                                            element.avatarUrl !== ""
-                                                ? `https://social-back-vku9.vercel.app${element.avatarUrl}`
-                                                : defaultImage
-                                        }
+                                        src={element.avatarUrl !== "" ? `${API_URL}${element.avatarUrl}` : defaultImage}
                                         alt="Аватарка"
                                         className="h-[120px] w-[220px] rounded-lg object-cover mr-4"
                                     />
@@ -143,11 +140,7 @@ const PeoplePage: FC = () => {
                                     className="rounded-lg mr-8 bg-slate-100 min-h-[150px] w-3/5 mb-4 flex items-center p-4"
                                 >
                                     <img
-                                        src={
-                                            element.avatarUrl !== ""
-                                                ? `https://social-back-vku9.vercel.app${element.avatarUrl}`
-                                                : defaultImage
-                                        }
+                                        src={element.avatarUrl !== "" ? `${API_URL}${element.avatarUrl}` : defaultImage}
                                         alt="Аватарка"
                                         className="h-[120px] w-[220px] rounded-lg object-cover mr-4"
                                     />
@@ -180,11 +173,7 @@ const PeoplePage: FC = () => {
                                     className="rounded-lg mr-8 bg-slate-100 min-h-[150px] w-3/5 mb-4 flex items-center p-4"
                                 >
                                     <img
-                                        src={
-                                            element.avatarUrl !== ""
-                                                ? `https://social-back-vku9.vercel.app${element.avatarUrl}`
-                                                : defaultImage
-                                        }
+                                        src={element.avatarUrl !== "" ? `${API_URL}${element.avatarUrl}` : defaultImage}
                                         alt="Аватарка"
                                         className="h-[120px] w-[220px]  rounded-lg object-cover mr-4"
                                     />
@@ -208,11 +197,7 @@ const PeoplePage: FC = () => {
                                     className="rounded-lg bg-slate-100 min-h-[150px] mr-8 w-3/5 mb-4 flex items-center p-4"
                                 >
                                     <img
-                                        src={
-                                            element.avatarUrl !== ""
-                                                ? `https://social-back-vku9.vercel.app${element.avatarUrl}`
-                                                : defaultImage
-                                        }
+                                        src={element.avatarUrl !== "" ? `${API_URL}${element.avatarUrl}` : defaultImage}
                                         alt="Аватарка"
                                         className="h-[120px] w-[220px] rounded-lg object-cover mr-4"
                                     />

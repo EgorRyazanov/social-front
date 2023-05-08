@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const API_URL = "https://social-back-vku9.vercel.app";
+export const API_URL = "http://158.160.48.220";
 
 const $api = axios.create({
     baseURL: API_URL,

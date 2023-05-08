@@ -4,6 +4,7 @@ import { TRootState } from "../../services/store";
 import { FC } from "react";
 import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import { TPost } from "../../services/slices/posts";
+import { API_URL } from "../../services/axios";
 
 const getUserPosts = (store: TRootState) => store.postsReducer.userPosts;
 const getAllPosts = (store: TRootState) => store.postsReducer.peoplePosts;
@@ -28,7 +29,7 @@ const FullPostPage: FC = () => {
             <div className="p-4">
                 {currentPost.imageUrl !== "" && (
                     <img
-                        src={`https://social-back-vku9.vercel.app${currentPost.imageUrl}`}
+                        src={`${API_URL}${currentPost.imageUrl}`}
                         className="max-h-[800px] max-w-[1200px] rounded-lg mb-4"
                         alt="Картинка"
                     />
