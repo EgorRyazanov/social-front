@@ -49,11 +49,7 @@ const ProfilePage: FC = () => {
             <div>
                 <div className="flex p-4 border-b-2">
                     <img
-                        src={
-                            person?.avatarUrl !== ""
-                                ? `${API_URL}${person?.avatarUrl}`
-                                : defaultImage
-                        }
+                        src={person?.avatarUrl !== "" ? `${API_URL}${person?.avatarUrl}` : defaultImage}
                         alt="Аватар"
                         className="w-2/5 h-[250px] object-cover rounded-xl"
                     />
@@ -69,7 +65,7 @@ const ProfilePage: FC = () => {
                         </p>
                     </div>
 
-                    {isFriend && (
+                    {_id && isFriend && (
                         <button
                             onClick={(e) => {
                                 e.preventDefault;
@@ -80,7 +76,7 @@ const ProfilePage: FC = () => {
                             Удалить из друзей
                         </button>
                     )}
-                    {isRequest && (
+                    {_id && isRequest && (
                         <div>
                             <button
                                 onClick={(e) => {
@@ -93,7 +89,7 @@ const ProfilePage: FC = () => {
                             </button>
                         </div>
                     )}
-                    {!isRequest && !isFriend && !isOutgoing && (
+                    {_id && !isRequest && !isFriend && !isOutgoing && (
                         <button
                             onClick={(e) => {
                                 e.preventDefault;
