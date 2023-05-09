@@ -75,8 +75,8 @@ const LoginPage = () => {
                             </button>
                         </div>
                     </form>
-                    <Link to="/login">
-                        <p>Уже есть аккаунт?</p>
+                    <Link to="/register">
+                        <p>Еще нет аккаунта?</p>
                     </Link>
                 </div>
             </div>
